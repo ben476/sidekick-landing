@@ -1,126 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      description="Add search with Kagi smarts and AI to your website with just a couple lines of code."
+    />
+    <title>Kagi Sidekick</title>
 
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta description="Add search with Kagi smarts and AI to your website with just a couple lines of code." />
-  <title>Kagi Sidekick</title>
+    <link rel="stylesheet" href="src/main.css" />
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
 
-  <link rel="stylesheet" href="src/main.css" />
-  <link rel="stylesheet" href="src/style.css" />
-</head>
+  <body>
+    <div class="doc_body">
+      <header>
+        <a class="logo" href="https://kagi.com/">
+          <svg
+            width="85"
+            height="45"
+            viewBox="0 0 85 45"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M65.9876 35.9814H57.8237C55.6147 35.9814 55.2305 33.5827 55.6147 32.6232C55.8068 32.1435 56.287 31.4718 56.6712 30.9921C58.2079 31.8556 60.0328 32.3354 61.9537 32.3354C68.1006 32.3354 72.9989 27.346 72.9989 21.3013C72.9989 18.039 71.5582 15.1605 69.3491 13.0497L69.6373 12.7618C70.2136 12.1861 71.078 11.8023 71.9424 11.8983L73.287 11.9942V6.71704H70.9819C68.2927 6.71704 66.0836 8.34817 65.1232 10.6509C64.1627 10.3631 63.1062 10.1712 62.0497 10.1712C55.9028 10.1712 51.0045 15.1605 51.0045 21.2053C51.0045 23.604 51.7729 25.9068 53.1175 27.7298C52.9254 27.9217 52.6373 28.1136 52.4452 28.2096C52.3491 28.3055 52.2531 28.4015 52.1571 28.4974C49.948 30.6083 48.8915 33.2949 49.4678 36.3652C49.7559 37.9964 51.1966 39.7234 52.6373 40.6829C53.5977 41.3546 54.8463 41.6424 56.0949 41.6424L65.3152 41.2586C66.3717 41.2586 67.3322 41.7384 67.9085 42.6979L69.061 44.9047L74.7277 42.9857L73.7672 40.8748C72.3266 37.9004 69.3491 35.9814 65.9876 35.9814ZM62.0497 16.0241C64.9311 16.0241 67.3322 18.4228 67.3322 21.3013C67.3322 24.1797 64.9311 26.5785 62.0497 26.5785C59.1684 26.5785 56.7672 24.1797 56.7672 21.3013C56.7672 18.3269 59.0723 16.0241 62.0497 16.0241Z"
+              fill="currentColor"
+            ></path>
+            <path
+              d="M33.8071 10.0752C28.0444 10.3631 23.2422 14.9686 22.858 20.7255C22.3777 27.5379 27.7563 33.1989 34.3834 33.1989C36.5924 33.1989 38.6094 31.9515 40.3382 30.8961V32.911H46.0049V21.2053C45.7167 14.7767 40.3382 9.78736 33.8071 10.0752ZM34.3834 27.8257C30.9258 27.8257 28.2365 25.0432 28.2365 21.685C28.2365 18.2309 31.0218 15.5443 34.3834 15.5443C37.841 15.5443 40.5303 18.3268 40.5303 21.685C40.6263 25.0432 37.841 27.8257 34.3834 27.8257Z"
+              fill="currentColor"
+            ></path>
+            <path
+              d="M22.9548 10.4588H14.9831L8.0678 17.3671L5.66667 19.7658V6.5249H0V32.9108H5.66667V23.0281L8.0678 25.4268V25.3309L15.5593 32.9108H23.5311L11.3333 21.397L22.9548 10.4588Z"
+              fill="currentColor"
+            ></path>
+            <path
+              d="M78.4453 30.8203V32.7346H84.0947V10.4336H78.4453V30.8203Z"
+              fill="currentColor"
+            ></path>
+            <path
+              d="M81.2245 7.27413C83.2341 7.27413 84.8631 5.64576 84.8631 3.63707C84.8631 1.62837 83.2341 0 81.2245 0C79.215 0 77.5859 1.62837 77.5859 3.63707C77.5859 5.64576 79.215 7.27413 81.2245 7.27413Z"
+              fill="currentColor"
+            ></path>
+          </svg>
+        </a>
 
-<body>
-  <div class="doc_body">
-    <header>
-      <a class="logo" href="https://kagi.com/">
-        <svg width="85" height="45" viewBox="0 0 85 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M65.9876 35.9814H57.8237C55.6147 35.9814 55.2305 33.5827 55.6147 32.6232C55.8068 32.1435 56.287 31.4718 56.6712 30.9921C58.2079 31.8556 60.0328 32.3354 61.9537 32.3354C68.1006 32.3354 72.9989 27.346 72.9989 21.3013C72.9989 18.039 71.5582 15.1605 69.3491 13.0497L69.6373 12.7618C70.2136 12.1861 71.078 11.8023 71.9424 11.8983L73.287 11.9942V6.71704H70.9819C68.2927 6.71704 66.0836 8.34817 65.1232 10.6509C64.1627 10.3631 63.1062 10.1712 62.0497 10.1712C55.9028 10.1712 51.0045 15.1605 51.0045 21.2053C51.0045 23.604 51.7729 25.9068 53.1175 27.7298C52.9254 27.9217 52.6373 28.1136 52.4452 28.2096C52.3491 28.3055 52.2531 28.4015 52.1571 28.4974C49.948 30.6083 48.8915 33.2949 49.4678 36.3652C49.7559 37.9964 51.1966 39.7234 52.6373 40.6829C53.5977 41.3546 54.8463 41.6424 56.0949 41.6424L65.3152 41.2586C66.3717 41.2586 67.3322 41.7384 67.9085 42.6979L69.061 44.9047L74.7277 42.9857L73.7672 40.8748C72.3266 37.9004 69.3491 35.9814 65.9876 35.9814ZM62.0497 16.0241C64.9311 16.0241 67.3322 18.4228 67.3322 21.3013C67.3322 24.1797 64.9311 26.5785 62.0497 26.5785C59.1684 26.5785 56.7672 24.1797 56.7672 21.3013C56.7672 18.3269 59.0723 16.0241 62.0497 16.0241Z"
-            fill="currentColor"></path>
-          <path
-            d="M33.8071 10.0752C28.0444 10.3631 23.2422 14.9686 22.858 20.7255C22.3777 27.5379 27.7563 33.1989 34.3834 33.1989C36.5924 33.1989 38.6094 31.9515 40.3382 30.8961V32.911H46.0049V21.2053C45.7167 14.7767 40.3382 9.78736 33.8071 10.0752ZM34.3834 27.8257C30.9258 27.8257 28.2365 25.0432 28.2365 21.685C28.2365 18.2309 31.0218 15.5443 34.3834 15.5443C37.841 15.5443 40.5303 18.3268 40.5303 21.685C40.6263 25.0432 37.841 27.8257 34.3834 27.8257Z"
-            fill="currentColor"></path>
-          <path
-            d="M22.9548 10.4588H14.9831L8.0678 17.3671L5.66667 19.7658V6.5249H0V32.9108H5.66667V23.0281L8.0678 25.4268V25.3309L15.5593 32.9108H23.5311L11.3333 21.397L22.9548 10.4588Z"
-            fill="currentColor"></path>
-          <path d="M78.4453 30.8203V32.7346H84.0947V10.4336H78.4453V30.8203Z" fill="currentColor"></path>
-          <path
-            d="M81.2245 7.27413C83.2341 7.27413 84.8631 5.64576 84.8631 3.63707C84.8631 1.62837 83.2341 0 81.2245 0C79.215 0 77.5859 1.62837 77.5859 3.63707C77.5859 5.64576 79.215 7.27413 81.2245 7.27413Z"
-            fill="currentColor"></path>
-        </svg>
-      </a>
-
-      <div class="nav_links">
-        <a href="https://kagi.com/sidekick/index.html">Kagi Sidekick</a>
-      </div>
-    </header>
-
-    <main class="mt_60">
-      <div class="content c_primary_9">
-        <div class="doc_title_box">
-          <div>
-            <h2 class="fs_36 fw_medium c_primary_0 f_lufga m_0 p_0">Kagi Sidekick</h2>
-            <div class="fs_20 c_primary_8">
-              Supercharge your website with AI-powered search and chat!
-            </div>
-            <div class="fs_base mt_16">
-              We'll sort out the hard stuff. Integrate with a couple lines of code using our framework integrations or
-              Web
-              Components.
-            </div>
-            <div class="fs_base mt_16">
-              See it in action at <a href="https://help.kagi.com/kagi/">help.kagi.com</a>
-            </div>
-          </div>
-          <div class="doggo_image_1">
-            <img src="doggo.svg" alt="doggo image" />
-          </div>
+        <div class="nav_links">
+          <a href="https://kagi.com/sidekick/index.html">Kagi Sidekick</a>
         </div>
+      </header>
 
-
-
-        <div class="mt_70 search_box">
-          <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
-          <form id="summary_form" action="https://sidekick-collect-emails.benhong.workers.dev/api/email" method="POST"
-            target="dummyframe">
-            <div class="fs_base">
-              Interested in getting Sidekick on your website? Let us know and join the waitlist.
+      <main class="mt_60">
+        <div class="content c_primary_9">
+          <div class="doc_title_box">
+            <div>
+              <h2 class="fs_36 fw_medium c_primary_0 f_lufga m_0 p_0">
+                Kagi Sidekick
+              </h2>
+              <div class="fs_20 c_primary_8">
+                Supercharge your website with AI-powered search and chat!
+              </div>
+              <div class="fs_base mt_16">
+                We'll sort out the hard stuff. Integrate with a couple lines of
+                code using our framework integrations or Web Components.
+              </div>
+              <div class="fs_base mt_16">
+                See it in action at
+                <a href="https://help.kagi.com/kagi/">help.kagi.com</a>
+              </div>
             </div>
-            <div class="search_box_input mt_16">
-              <input type="text" id="summary_input" name="email" placeholder="Your email" required type="submit">
-              <!-- <textarea placeholder="Your email" class="textBoxScroller" id="summary_input" name="summary_input"
+            <div class="doggo_image_1">
+              <img src="doggo.svg" alt="doggo image" />
+            </div>
+          </div>
+
+          <div class="mt_70 search_box">
+            <iframe
+              name="dummyframe"
+              id="dummyframe"
+              style="display: none"
+            ></iframe>
+            <form
+              id="summary_form"
+              action="https://sidekick-collect-emails.benhong.workers.dev/api/email"
+              method="POST"
+              target="dummyframe"
+            >
+              <div class="fs_base">
+                Interested in getting Sidekick on your website? Let us know and
+                join the waitlist.
+              </div>
+              <div class="search_box_input mt_16">
+                <input
+                  type="text"
+                  id="summary_input"
+                  name="email"
+                  placeholder="Your email"
+                  required
+                  type="submit"
+                />
+                <!-- <textarea placeholder="Your email" class="textBoxScroller" id="summary_input" name="summary_input"
                 rows="1" maxlength="200" required="" type="submit"></textarea> -->
-              <button id="submit" class="submit-btn-box" type="submit">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M3 12V19.7665C3 19.8757 3.11302 19.9483 3.21236 19.9029L20.2016 12.1364C20.3184 12.083 20.3184 11.917 20.2016 11.8636L3.21236 4.09708C3.11302 4.05167 3 4.12427 3 4.2335V12ZM3 12H10.5"
-                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
-                </svg>
-              </button>
-            </div>
-          </form>
-        </div>
+                <button id="submit" class="submit-btn-box" type="submit">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3 12V19.7665C3 19.8757 3.11302 19.9483 3.21236 19.9029L20.2016 12.1364C20.3184 12.083 20.3184 11.917 20.2016 11.8636L3.21236 4.09708C3.11302 4.05167 3 4.12427 3 4.2335V12ZM3 12H10.5"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div>
 
-        <div class="request_status hide" id="request_status">
-          <span id="submit-text" class="fs_base">h</span>
-        </div>
+          <div class="request_status hide" id="request_status">
+            <span id="submit-text" class="fs_base">h</span>
+          </div>
 
-        <div class="mt_50 fs_base">
-          <!-- <p>
+          <div class="mt_50 fs_base">
+            <!-- <p>
             Get in touch with Vladimir Prelovac
             <a href="mailto:vlad@kagi.com">vlad@kagi.com</a> for sales
             inquiries or email
             <a href="mailto:support@kagi.com">support@kagi.com</a> for
             support.
           </p> -->
-          <p>
-            Follow <a href="https://twitter.com/KagiHQ">@KagiHQ</a> for
-            updates or join our
-            <a href="https://kagi.com/discord">Discord</a> to chat.
-            <a href="https://kagifeedback.org/">Report issues.</a>
-          </p>
+            <p>
+              Follow <a href="https://twitter.com/KagiHQ">@KagiHQ</a> for
+              updates or join our
+              <a href="https://kagi.com/discord">Discord</a> to chat.
+              <a href="https://kagifeedback.org/">Report issues.</a>
+            </p>
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
 
-    <footer>
-      <div class="foot_links">
-        <a href="https://kagi.com/">Kagi.com</a>
-        <a href="https://help.kagi.com/kagi/company/">About</a>
-        <a href="https://blog.kagi.com/blog">Blog</a>
-        <a href="https://help.kagi.com/kagi/">Help</a>
-        <a href="https://kagi.com/privacy#Summarizer">Privacy &amp; Terms</a>
-      </div>
+      <footer>
+        <div class="foot_links">
+          <a href="https://kagi.com/">Kagi.com</a>
+          <a href="https://help.kagi.com/kagi/company/">About</a>
+          <a href="https://blog.kagi.com/blog">Blog</a>
+          <a href="https://help.kagi.com/kagi/">Help</a>
+          <a href="https://kagi.com/privacy#Summarizer">Privacy &amp; Terms</a>
+        </div>
 
-      <div class="foot_copy">© Kagi. Humanize the Web.</div>
-    </footer>
-  </div>
+        <div class="foot_copy">© Kagi. Humanize the Web.</div>
+      </footer>
+    </div>
 
-  <script src="/src/main.js"></script>
-</body>
-
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>
