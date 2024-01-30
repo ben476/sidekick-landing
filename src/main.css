@@ -5,7 +5,10 @@
 
 @font-face {
   font-family: "lufga";
-  src: url("../fonts/lufga/lufga-regular-webfont.woff2") format("woff2"), url("../fonts/lufga/lufga-regular-webfont.woff") format("woff"), url("../fonts/lufga/lufga-regular-webfont.ttf") format("truetype"), url("../fonts/lufga/lufga-regular-webfont.svg#lufgaregular") format("svg");
+  src: url("../fonts/lufga/lufga-regular-webfont.woff2") format("woff2"),
+    url("../fonts/lufga/lufga-regular-webfont.woff") format("woff"),
+    url("../fonts/lufga/lufga-regular-webfont.ttf") format("truetype"),
+    url("../fonts/lufga/lufga-regular-webfont.svg#lufgaregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -87,8 +90,8 @@ input::-ms-input-placeholder {
   color: var(--c_primary_dim_6);
 }
 
-input:not([type=checkbox]):not([type=radio]),
-input[type=range],
+input:not([type="checkbox"]):not([type="radio"]),
+input[type="range"],
 select,
 button,
 textarea {
@@ -97,12 +100,12 @@ textarea {
 
 button,
 select,
-input[type=submit],
-input[type=reset],
-input[type=button],
-input[type=checkbox],
-input[type=range],
-input[type=radio] {
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="checkbox"],
+input[type="range"],
+input[type="radio"] {
   cursor: pointer;
 }
 
@@ -196,7 +199,8 @@ textarea:disabled {
   line-height: 1.5rem; /* 24px */
 }
 
-.fs_18, .request_status {
+.fs_18,
+.request_status {
   font-size: 1.125rem; /* 18px */
   line-height: 1.75rem; /* 28px */
 }
@@ -324,8 +328,8 @@ textarea:disabled {
   line-height: 1.5;
   vertical-align: middle;
   -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  user-select: none;
   border-radius: 0.375rem;
   cursor: pointer;
   align-items: center;
@@ -367,7 +371,8 @@ select {
 
 select {
   background-color: var(--dd_bg);
-  background: var(--dd_bg) var(--select-arrow) calc(100% - 12px) 50%/12px no-repeat;
+  background: var(--dd_bg) var(--select-arrow) calc(100% - 12px) 50%/12px
+    no-repeat;
   padding-right: 35px;
   border: 1px solid var(--dd_border);
 }
@@ -420,14 +425,23 @@ main {
 }
 
 .doggo_image_1 {
-  min-width: 120px;
-  height: 120px;
+  width: 400px;
+  height: 160px;
   display: flex;
   margin-left: 30px;
 }
 .doggo_image_1 img {
   width: 100%;
   height: 100%;
+}
+
+.screenshot {
+  width: 100%;
+  height: auto;
+  display: flex;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
 }
 
 .search_box {
@@ -468,11 +482,11 @@ main {
   line-height: 1.5rem;
   max-height: 340px;
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   -moz-tab-size: 4;
-    -o-tab-size: 4;
-       tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
   width: calc(100% - 1rem);
   padding-right: 36px;
 }
@@ -661,4 +675,4 @@ footer a {
   align-items: center;
   /* padding-left: 12px; */
   /* font-family: "lufga"; */
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */
